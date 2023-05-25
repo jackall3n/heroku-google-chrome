@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
-set -o errexit
-set -o pipefail
-set -o nounset
-unset GIT_DIR
+#set -o errexit
+#set -o pipefail
+#set -o nounset
+#unset GIT_DIR
 #
 #function topic() {
 #  echo "-----> $*..."
@@ -47,5 +47,5 @@ unset GIT_DIR
 #echo "export PATH=\$PATH:\$HOME/.chromedriver/bin" >> $BUILD_DIR/.profile.d/chromedriver.sh
 #indent "Created"
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-apt install ./google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+yum localinstall -y google-chrome-stable_current_x86_64.rpm
